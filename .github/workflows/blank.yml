@@ -1,16 +1,16 @@
 name: prakash pipeline
 
-on: 
-workflow_disbatch:
-job:
-runs_on:ubuntu_latest
-steps:
-- name: public repo
-  uses: GuillaumeFalourd/clone-github-repo-action@v2.1
-  with:
-    depth: 1
-    branch: 'main'
-    owner: 'sudarsanchakri123'
-    repository: 'develop-the-app'
-    
+on:
+  workflow_dispatch:
 
+jobs:
+  job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: public repo
+        uses: GuillaumeFalourd/clone-github-repo-action@v2.1
+        with:
+          depth: 1
+          branch: 'main'
+          owner: 'sudarsanchakri123'
+          repository: 'develop-the-app'
