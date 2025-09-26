@@ -14,3 +14,11 @@ jobs:
           branch: 'main'
           owner: 'sudarsanchakri123'
           repository: 'develop-the-app'
+
+       - name: List my repo files
+        run: ls -R
+
+      - name: Move into cloned repo
+        run: |
+          cd develop-the-app   # move into the cloned repo
+          ls -l                # list files inside
