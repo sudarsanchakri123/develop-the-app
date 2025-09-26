@@ -1,22 +1,17 @@
-name: prakash pipeline
-
-on:
-  workflow_dispatch:
-
 jobs:
   job:
     runs-on: ubuntu-latest
     steps:
-      - name: PUBLIC repositors
+      - name: Checkout my repo
+        uses: actions/checkout@v4
+
+      - name: Clone another public repo
         uses: GuillaumeFalourd/clone-github-repo-action@v2.1
         with:
           depth: 1
           branch: 'main'
           owner: 'sudarsanchakri123'
           repository: 'develop-the-app'
-
-       - name: List my repo files
-        run: ls -R
 
       - name: Move into cloned repo
         run: |
