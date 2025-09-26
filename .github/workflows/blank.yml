@@ -33,4 +33,4 @@ jobs:
           password: ${{ secrets.dockerhub}}
 
       - name: Docker image name
-        uses: docker build -t developimage:image
+        uses: docker build -t developimage:image .
