@@ -1,3 +1,8 @@
+name: prakash pipeline
+
+on:
+  workflow_dispatch:
+
 jobs:
   job:
     runs-on: ubuntu-latest
@@ -13,7 +18,10 @@ jobs:
           owner: 'sudarsanchakri123'
           repository: 'develop-the-app'
 
-      - name: Move into cloned repo
+      - name: List my repo files
+        run: ls -R
+
+      - name: Move into cloned repo and list files
         run: |
-          cd develop-the-app   # move into the cloned repo
-          ls -l                # list files inside
+          cd develop-the-app   # move inside the cloned repo
+          ls -R               # list all files inside it
