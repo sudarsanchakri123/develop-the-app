@@ -7,7 +7,7 @@ jobs:
   job:
     runs-on: ubuntu-latest
     steps:
-      - name: public repo
+      - name: PUBLIC repositors
         uses: GuillaumeFalourd/clone-github-repo-action@v2.1
         with:
           depth: 1
