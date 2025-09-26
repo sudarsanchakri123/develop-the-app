@@ -31,3 +31,6 @@ jobs:
         with:
           username: sudarsanchakri123
           password: ${{ secrets.dockerhub}}
+
+      - name: Docker image name
+        uses: docker build -t developimage:image
