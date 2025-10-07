@@ -33,8 +33,8 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}   # make sure this secret exists
 
       - name: Build Docker image
-        run: docker build -t sudarsanchakri123/developimage:latest .
+        run: docker build -t sudarsanchakri123/developimage:pig .
 
       - name: Push Docker image
-        run: docker push sudarsanchakri123/developimage:latest
+        run: docker push sudarsanchakri123/developimage:pig
  
