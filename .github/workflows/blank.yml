@@ -6,6 +6,7 @@ on:
 jobs:
   job:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout my repo
         uses: actions/checkout@v4
@@ -30,11 +31,7 @@ jobs:
         uses: docker/login-action@v3
         with:
           username: sudarsanchakri123
-          password: ${{ secrets.DOCKERHUB_TOKEN }}   # make sure this secret exists
+          password: ${{ secrets.dockerhub }}
 
       - name: Build Docker image
-        run: docker build -t sudarsanchakri123/developimage:pig .
-
-      - name: Push Docker image
-        run: docker push sudarsanchakri123/developimage:pig
- 
+        run: docker build -t developimage:image .
