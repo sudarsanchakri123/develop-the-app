@@ -1,9 +1,9 @@
-name: prakash  pipeline432
+name: prakash pipeline
 
 on:
   push:
-      branches:
-          -main
+    branches:
+      - main
 
 jobs:
   build_and_push:
@@ -21,19 +21,17 @@ jobs:
           owner: 'sudarsanchakri123'
           repository: 'develop-the-app'
 
-      - name: List my repo files
-        run: ls -R
-
-      - name: Move into cloned repo and list files
-        run: |
-          cd develop-the-app
-          ls -R
+      - name: Move into cloned repo
+        run: cd develop-the-app && ls -R
 
       - name: Login to Docker Hub
         uses: docker/login-action@v3
         with:
           username: sudarsanchakri123
-          password: ${{ secrets.dockerhub }}
+          password: ${{ secrets.DOCKERHUB }}
 
       - name: Build Docker image
-        run: docker build -t developimage:image .
+        run: docker build -t sudarsanchakri123/developimage:latest .
+
+      - name: Push Docker image to Docker Hub
+        run: docker push sudarsanchakri123/developimage:latest
