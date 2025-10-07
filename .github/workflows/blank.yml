@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  build_and_push:
+  build:
     runs-on: ubuntu-latest
 
     steps:
@@ -32,5 +32,3 @@ jobs:
 
       - name: Build Docker image
         run: docker build -t sudarsanchakri123/developimage:latest .
-
- 
