@@ -33,5 +33,4 @@ jobs:
       - name: Build Docker image
         run: docker build -t sudarsanchakri123/developimage:latest .
 
-      - name: Push Docker image to Docker Hub
-        run: docker push sudarsanchakri123/developimage:latest
+ 
