@@ -1,7 +1,9 @@
 name: prakash pipeline
 
 on:
-  workflow_dispatch:
+  push:
+      branches:
+          -main
 
 jobs:
   job:
